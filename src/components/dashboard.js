@@ -25,7 +25,7 @@ class Dashboard extends Component {
                 <div class="quick_activity_wrap">
                 <div class="single_quick_activity d-flex">
                 <div class="icon">
-                <img src="img/icon/man.svg" alt="" />
+                <img src="assets/img/icon/man.svg" alt="" />
                 </div>
                 <div class="count_content">
                 <h3><span class="counter">520</span> </h3>
@@ -34,7 +34,7 @@ class Dashboard extends Component {
                 </div>
                 <div class="single_quick_activity d-flex">
                 <div class="icon">
-                <img src="img/icon/cap.svg" alt="" />
+                <img src="assets/img/icon/cap.svg" alt="" />
                 </div>
                 <div class="count_content">
                 <h3><span class="counter">6969</span> </h3>
@@ -43,7 +43,7 @@ class Dashboard extends Component {
                 </div>
                 <div class="single_quick_activity d-flex">
                 <div class="icon">
-                <img src="img/icon/wheel.svg" alt="" />
+                <img src="assets/img/icon/wheel.svg" alt="" />
                 </div>
                 <div class="count_content">
                 <h3><span class="counter">7510</span> </h3>
@@ -52,7 +52,7 @@ class Dashboard extends Component {
                 </div>
                 <div class="single_quick_activity d-flex">
                 <div class="icon">
-                <img src="img/icon/pharma.svg" alt="" />
+                <img src="assets/img/icon/pharma.svg" alt="" />
                 </div>
                 <div class="count_content">
                 <h3><span class="counter">2110</span> </h3>
@@ -139,7 +139,7 @@ class Dashboard extends Component {
                 <th scope="row">
                 <div class="patient_thumb d-flex align-items-center">
                 <div class="student_list_img mr_20">
-                <img src="img/patient/pataint.png" alt="" srcset="" />
+                <img src="assets/img/patient/pataint.png" alt="" srcset="" />
                 </div>
                 <p>Jhon Kural</p>
                 </div>
@@ -166,7 +166,7 @@ class Dashboard extends Component {
                 <th scope="row">
                 <div class="patient_thumb d-flex align-items-center">
                 <div class="student_list_img mr_20">
-                <img src="img/patient/2.png" alt="" srcset="" />
+                <img src="assets/img/patient/2.png" alt="" srcset="" />
                 </div>
                 <p>Jhon Kural</p>
                 </div>
@@ -193,7 +193,7 @@ class Dashboard extends Component {
                 <th scope="row">
                 <div class="patient_thumb d-flex align-items-center">
                 <div class="student_list_img mr_20">
-                <img src="img/patient/3.png" alt="" srcset="" />
+                <img src="assets/img/patient/3.png" alt="" srcset="" />
                 </div>
                 <p>Jhon Kural</p>
                 </div>
@@ -220,7 +220,7 @@ class Dashboard extends Component {
                 <th scope="row">
                 <div class="patient_thumb d-flex align-items-center">
                 <div class="student_list_img mr_20">
-                <img src="img/patient/4.png" alt="" srcset="" />
+                <img src="assets/img/patient/4.png" alt="" srcset="" />
                 </div>
                 <p>Jhon Kural</p>
                 </div>
@@ -247,7 +247,7 @@ class Dashboard extends Component {
                 <th scope="row">
                 <div class="patient_thumb d-flex align-items-center">
                 <div class="student_list_img mr_20">
-                <img src="img/patient/5.png" alt="" srcset="" />
+                <img src="assets/img/patient/5.png" alt="" srcset="" />
                 </div>
                 <p>Jhon Kural</p>
                 </div>
@@ -274,7 +274,7 @@ class Dashboard extends Component {
                 <th scope="row">
                 <div class="patient_thumb d-flex align-items-center">
                 <div class="student_list_img mr_20">
-                <img src="img/patient/6.png" alt="" srcset="" />
+                <img src="assets/img/patient/6.png" alt="" srcset="" />
                 </div>
                 <p>Jhon Kural</p>
                 </div>
@@ -301,7 +301,7 @@ class Dashboard extends Component {
                 <th scope="row">
                 <div class="patient_thumb d-flex align-items-center">
                 <div class="student_list_img mr_20">
-                <img src="img/patient/6.png" alt="" srcset="" />
+                <img src="assets/img/patient/6.png" alt="" srcset="" />
                 </div>
                 <p>Jhon Kural</p>
                 </div>
@@ -378,7 +378,7 @@ class Dashboard extends Component {
 
                 <div class="single_staf">
                 <div class="staf_thumb">
-                <img src="img/staf/1.png" alt="" />
+                <img src="assets/img/staf/1.png" alt="" />
                 </div>
                 <h4>Dr. Sysla J Smith</h4>
                 <p>Doctor</p>
@@ -386,7 +386,7 @@ class Dashboard extends Component {
 
                 <div class="single_staf">
                 <div class="staf_thumb">
-                <img src="img/staf/2.png" alt="" />
+                <img src="assets/img/staf/2.png" alt="" />
                 </div>
                 <h4>Dr. Sysla J Smith</h4>
                 <p>Doctor</p>
@@ -394,7 +394,7 @@ class Dashboard extends Component {
 
                 <div class="single_staf">
                 <div class="staf_thumb">
-                <img src="img/staf/3.png" alt="" />
+                <img src="assets/img/staf/3.png" alt="" />
                 </div>
                 <h4>Dr. Sysla J Smith</h4>
                 <p>Doctor</p>
@@ -402,7 +402,7 @@ class Dashboard extends Component {
 
                 <div class="single_staf">
                 <div class="staf_thumb">
-                <img src="img/staf/4.png" alt="" />
+                <img src="assets/img/staf/4.png" alt="" />
                 </div>
                 <h4>Dr. Sysla J Smith</h4>
                 <p>Doctor</p>
@@ -410,7 +410,7 @@ class Dashboard extends Component {
 
                 <div class="single_staf">
                 <div class="staf_thumb">
-                <img src="img/staf/5.png" alt="" />
+                <img src="assets/img/staf/5.png" alt="" />
                 </div>
                 <h4>Dr. Sysla J Smith</h4>
                 <p>Doctor</p>
@@ -418,7 +418,7 @@ class Dashboard extends Component {
 
                 <div class="single_staf">
                 <div class="staf_thumb">
-                <img src="img/staf/1.png" alt="" />
+                <img src="assets/img/staf/1.png" alt="" />
                 </div>
                 <h4>Dr. Sysla J Smith</h4>
                 <p>Doctor</p>
@@ -426,7 +426,7 @@ class Dashboard extends Component {
 
                 <div class="single_staf">
                 <div class="staf_thumb">
-                <img src="img/staf/2.png" alt="" />
+                <img src="assets/img/staf/2.png" alt="" />
                 </div>
                 <h4>Dr. Sysla J Smith</h4>
                 <p>Doctor</p>
@@ -434,7 +434,7 @@ class Dashboard extends Component {
 
                 <div class="single_staf">
                 <div class="staf_thumb">
-                <img src="img/staf/3.png" alt="" />
+                <img src="assets/img/staf/3.png" alt="" />
                 </div>
                 <h4>Dr. Sysla J Smith</h4>
                 <p>Doctor</p>
