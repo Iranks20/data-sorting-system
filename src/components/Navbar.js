@@ -12,35 +12,32 @@ function Navbar() {
             </div>
             <ul id="sidebar_menu">
             <li class="side_menu_title">
-            <span>Dashboard</span>
-            </li>
+            <span><a class="mm-active" href="/dashboard">Dashboard</a></span>
+            </li> 
             <li class="mm-active">
-            <a class="has-arrow" href="#" aria-expanded="false">
+            {/* <a class="has-arrow" href="#" aria-expanded="false">
 
             <img src="img/menu-icon/1.svg" alt="" />
             <span>Dashboard</span>
             </a>
             <ul>
             <li><a class="active" href="/dashboard">Dashboard</a></li>
-            </ul>
+            </ul> */}
 
-            <li class="side_menu_title">
-            <span>Pages</span>
-            </li>
             <li class="">
-            <a class="has-arrow" href="#" aria-expanded="false">
+            {/* <a class="has-arrow" href="#" aria-expanded="false">
             <img src="img/menu-icon/6.svg" alt="" />
             <span>Forms</span>
-            </a>
+            </a> */}
             <ul>
-            <li><a href="#">Incidences</a>
+            <li><a class="active" href="#">Incidences</a>
             <ul>
             <li><a href="/daily_incidence">daily incidence</a></li>
             <li><a href="/weekly_incidence">weekly incidence</a></li>
             <li><a href="/monthly_incidence">monthly incidence</a></li>
             </ul>
             </li>
-            <li><a href="#">Reporters</a>
+            <li><a class="active">Reporters</a>
             <ul>
             <li><a href="/daily_reporters">Daily Reporters</a></li>
             <li><a href="/weekly_reporters">Weekly Reporters</a></li>

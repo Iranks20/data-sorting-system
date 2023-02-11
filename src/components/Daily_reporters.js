@@ -13,7 +13,7 @@ class Daily_reporters extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/api/v1/reporters")
+    fetch("http://localhost:5000/api/v1/reporters/daily")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)
@@ -64,11 +64,12 @@ class Daily_reporters extends React.Component {
            <thead>
            <tr>
            <th scope="col">Id</th>
-           <th scope="col">First name</th>
-           <th scope="col">Last name</th>
+           <th scope="col">First Name</th>
+           <th scope="col">Last Name</th>
            <th scope="col">Email</th>
            <th scope="col">Sex</th>
-           <th scope="col">Phone number</th>
+           <th scope="col">Phone Number</th>
+           <th scope="col">Date & Time</th>
            </tr>
            </thead>
            <tbody> {
@@ -80,6 +81,7 @@ class Daily_reporters extends React.Component {
               <td>{rep.email}</td>
               <td>{rep.sex}</td>
               <td>{rep.phone_number}</td>
+              <td>{rep.datetime}</td>
               </tr>
 
             )) 

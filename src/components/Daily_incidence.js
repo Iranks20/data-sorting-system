@@ -13,7 +13,7 @@ class Daily_incidence extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/api/v1/incidences")
+    fetch("http://localhost:5000/api/v1/incidences/daily")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)
@@ -67,11 +67,11 @@ class Daily_incidence extends React.Component {
            <th scope="col">Incdence</th>
            <th scope="col">Location</th>
            <th scope="col">Cordinates</th>
-           <th scope="col">Time</th>
-           <th scope="col">date</th>
+           {/* <th scope="col">Time</th> */}           
            <th scope="col">To whom</th>
            <th scope="col">By who</th>
            <th scope="col">details</th>
+           <th scope="col">Date & Time</th>
            </tr>
            </thead>
            <tbody> {
@@ -81,11 +81,11 @@ class Daily_incidence extends React.Component {
               <td>{incid.incident}</td>
               <td>{incid.location}</td>
               <td>{incid.cordinates}</td>
-              <td>{incid.time}</td>
-              <td>{incid.date}</td>
+              {/* <td>{incid.time}</td> */}             
               <td>{incid.to_whom}</td>
               <td>{incid.by_who}</td>
               <td>{incid.details}</td>
+              <td>{incid.datetime}</td>
               </tr>
 
             )) 
