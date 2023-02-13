@@ -54,7 +54,7 @@ class Weekly_reporters extends React.Component {
            </div>
            </div>
            <div class="add_button ms-2">
-           <a href="#" data-bs-toggle="modal" data-bs-target="#addcategory" class="btn_1">Add New</a>
+           <a href="/register" data-bs-toggle="modal" data-bs-target="#addcategory" class="btn_1">Add New</a>
            </div>
            </div>
            </div>

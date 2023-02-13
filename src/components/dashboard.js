@@ -4,7 +4,105 @@ import Navbar from './Navbar'
 import Upperbar from './Upperbar'
 
 class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          incidences: [],
+          weeklyCounts:[],
+          monthlyCounts: [],
+          totalIncidences: [],
+          dailyReportersCount: [],
+          weeklyReportersCount: [],
+          monthlyReportersCount: [],
+          allReportersCount: [],
+          DataisLoaded: false
+        };
+      }
+      componentDidMount() {
+        fetch("http://localhost:5000/api/v1/incidences/dailycounts")
+        .then( (res) => res.json())
+        .then( (json) => {
+          console.log(json)
+          this.setState({
+            incidences: json,
+            DataisLoaded: true
+          });
+        })
+
+        fetch("http://localhost:5000/api/v1/incidences/weeklycounts")
+        .then( (res) => res.json())
+        .then( (json) => {
+          console.log(json)
+          this.setState({
+            weeklyCounts: json,
+            DataisLoaded: true
+          });
+        })
+
+        fetch("http://localhost:5000/api/v1/incidences/monthlycounts")
+        .then( (res) => res.json())
+        .then( (json) => {
+          console.log(json)
+          this.setState({
+            monthlyCounts: json,
+            DataisLoaded: true
+          });
+        })
+
+        fetch("http://localhost:5000/api/v1/incidences/countall")
+        .then( (res) => res.json())
+        .then( (json) => {
+          console.log(json)
+          this.setState({
+            totalIncidences: json,
+            DataisLoaded: true
+          });
+        })
+
+        fetch("http://localhost:5000/api/v1/reporters/dailycounts")
+        .then( (res) => res.json())
+        .then( (json) => {
+          console.log(json)
+          this.setState({
+            dailyReportersCount: json,
+            DataisLoaded: true
+          });
+        })
+
+        fetch("http://localhost:5000/api/v1/reporters/weeklycounts")
+        .then( (res) => res.json())
+        .then( (json) => {
+          console.log(json)
+          this.setState({
+            weeklyReportersCount: json,
+            DataisLoaded: true
+          });
+        })
+
+        fetch("http://localhost:5000/api/v1/reporters/monthlycounts")
+        .then( (res) => res.json())
+        .then( (json) => {
+          console.log(json)
+          this.setState({
+            monthlyReportersCount: json,
+            DataisLoaded: true
+          });
+        })
+
+        fetch("http://localhost:5000/api/v1/reporters/allreporters")
+        .then( (res) => res.json())
+        .then( (json) => {
+          console.log(json)
+          this.setState({
+            allReportersCount: json,
+            DataisLoaded: true
+          });
+        })
+      }
     render(){
+        const { DataisLoaded, incidences, weeklyCounts, monthlyCounts, totalIncidences, dailyReportersCount, weeklyReportersCount, monthlyReportersCount, allReportersCount } = this.state;
+        if (!DataisLoaded) return <div>
+        <h1> Pleses wait some time.... </h1> </div> ;
         return(
             <div class="crm_body_bg">
                                
@@ -23,42 +121,81 @@ class Dashboard extends Component {
                 <div class="row">
                 <div class="col-12">
                 <div class="quick_activity_wrap">
-                <div class="single_quick_activity d-flex">
-                <div class="icon">
-                <img src="assets/img/icon/man.svg" alt="" />
+                {/* counting daily begin */}
+                <div class="single_quick_activity d-flex">{
+                    incidences.map( (incid) => (
+                        <div class="single_quick_activity d-flex" key={incid}>
+                        <div class="icon">
+                        <img src="assets/img/icon/man.svg" alt="" />
+                        </div>
+                        <div class="count_content">
+                        <h3><span class="counter">{incid.dailyincident_count}</span> </h3>
+                        <p>Daily Incidences</p>
+                        </div>
+                        </div>
+          
+                      )) 
+                    
+                }               
                 </div>
-                <div class="count_content">
-                <h3><span class="counter">520</span> </h3>
-                <p>Doctors</p>
+                {/* counting daily end*/}
+
+                {/* counting weekly incidences begin */}
+                <div class="single_quick_activity d-flex">{
+                    weeklyCounts.map( (incide) => (
+                        <div class="single_quick_activity d-flex" key={incide}>
+                        <div class="icon">
+                        <img src="assets/img/icon/man.svg" alt="" />
+                        </div>
+                        <div class="count_content">
+                        <h3><span class="counter">{incide.weeklyincident_count}</span> </h3>
+                        <p>Weekly Incidences</p>
+                        </div>
+                        </div>
+          
+                      )) 
+                    
+                }               
                 </div>
+                {/* counting weekly incidences end */}
+
+                {/* counting monthly incident begin */}
+                <div class="single_quick_activity d-flex">{
+                    monthlyCounts.map( (incidee) => (
+                        <div class="single_quick_activity d-flex" key={incidee}>
+                        <div class="icon">
+                        <img src="assets/img/icon/wheel.svg" alt="" />
+                        </div>
+                        <div class="count_content">
+                        <h3><span class="counter">{incidee.monthlyincident_count}</span> </h3>
+                        <p>Monthly Incidences</p>
+                        </div>
+                        </div>
+          
+                      )) 
+                    
+                }               
                 </div>
-                <div class="single_quick_activity d-flex">
-                <div class="icon">
-                <img src="assets/img/icon/cap.svg" alt="" />
+                {/* monthly incident count end */}
+
+                {/* counting all incidences begins */}
+                <div class="single_quick_activity d-flex">{
+                    totalIncidences.map( (incideee) => (
+                        <div class="single_quick_activity d-flex" key={incideee}>
+                        <div class="icon">
+                        <img src="assets/img/icon/wheel.svg" alt="" />
+                        </div>
+                        <div class="count_content">
+                        <h3><span class="counter">{incideee.allincident_count}</span> </h3>
+                        <p>all Incidences</p>
+                        </div>
+                        </div>
+          
+                      )) 
+                    
+                }               
                 </div>
-                <div class="count_content">
-                <h3><span class="counter">6969</span> </h3>
-                <p>Nurses</p>
-                </div>
-                </div>
-                <div class="single_quick_activity d-flex">
-                <div class="icon">
-                <img src="assets/img/icon/wheel.svg" alt="" />
-                </div>
-                <div class="count_content">
-                <h3><span class="counter">7510</span> </h3>
-                <p>Patients</p>
-                </div>
-                </div>
-                <div class="single_quick_activity d-flex">
-                <div class="icon">
-                <img src="assets/img/icon/pharma.svg" alt="" />
-                </div>
-                <div class="count_content">
-                <h3><span class="counter">2110</span> </h3>
-                <p>Pharmacusts</p>
-                </div>
-                </div>
+                {/* counting ll inidences ends */}
                 </div>
                 </div>
                 </div>
@@ -69,41 +206,65 @@ class Dashboard extends Component {
                 <div class="white_box mb_30 ">
                 <div class="box_header border_bottom_1px  ">
                 <div class="main-title">
-                <h3 class="mb_25">Hospital Survey</h3>
+                <h3 class="mb_25">Reporters Dashboard</h3>
                 </div>
                 </div>
                 <div class="income_servay">
+                    
                 <div class="row">
-                <div class="col-md-3">
+                {/* daily reporters count*/}
+                <div class="col-md-3">{
+                dailyReportersCount.map( (reportee) => (
                 <div class="count_content">
-                <h3>$ <span class="counter">305</span> </h3>
-                <p>Today's Income</p>
+                <h3><span class="counter">{reportee.countdaily_reporters}</span> </h3>
+                <p>Today's Reporters</p>
                 </div>
+                    ))
+                }
                 </div>
-                <div class="col-md-3">
+                {/* daily reorters count */}
+
+                {/* count weekly reporters begin */}
+                <div class="col-md-3">{
+                weeklyReportersCount.map( (reporteee) => (
                 <div class="count_content">
-                <h3>$ <span class="counter">1005</span> </h3>
-                <p>This Week's Income</p>
+                <h3><span class="counter">{reporteee.countweekly_reporters}</span> </h3>
+                <p>week's Reporters</p>
                 </div>
+                    ))
+                }
                 </div>
-                <div class="col-md-3">
+                {/* count weekly reporters end */}
+                
+                {/* count monthly reporters begin*/}
+                <div class="col-md-3">{
+                monthlyReportersCount.map( (reporteeee) => (
                 <div class="count_content">
-                <h3>$ <span class="counter">5505</span> </h3>
-                <p>This Month's Income</p>
+                <h3><span class="counter">{reporteeee.countmonthly_reporters}</span> </h3>
+                <p>month's Reporters</p>
                 </div>
+                    ))
+                }
                 </div>
-                <div class="col-md-3">
+                {/* count monthly reporters end */}
+
+                {/* alll reporters count begin */}
+                <div class="col-md-3">{
+                allReportersCount.map( (reporteeeee) => (
                 <div class="count_content">
-                <h3>$ <span class="counter">155615</span> </h3>
-                <p>This Year's Income</p>
+                <h3><span class="counter">{reporteeeee.countall_reporters}</span> </h3>
+                <p>all Reporters</p>
                 </div>
+                    ))
+                }
                 </div>
+                {/* all reporters count end */}
                 </div>
                 </div>
                 <div id="bar_wev"></div>
                 </div>
                 </div>
-                <div class="col-xl-7">
+                {/* <div class="col-xl-7">
                 <div class="white_box QA_section card_height_100">
                 <div class="white_box_tittle list_header m-0 align-items-center">
                 <div class="main-title mb-sm-15">
@@ -328,30 +489,34 @@ class Dashboard extends Component {
                 </table>
                 </div>
                 </div>
-                </div>
+                </div> */}
+
+
+
+
                 <div class="col-xl-5 ">
                 <div class="white_box card_height_50 mb_30">
                 <div class="box_header border_bottom_1px  ">
                 <div class="main-title">
-                <h3 class="mb_25">Total Recover Report</h3>
+                <h3 class="mb_25">Total Number of incidences</h3>
                 </div>
                 </div>
                 <div id="chart-7"></div>
                 <div class="row text-center mt-3">
                 <div class="col-sm-6">
                 <h6 class="heading_6 d-block">Last Month</h6>
-                <p class="m-0">358</p>
+                <p class="m-0">6</p>
                 </div>
                 <div class="col-sm-6">
-                <h6 class="heading_6 d-block">Current Month</h6>
-                <p class="m-0">194</p>
+                <h6 class="heading_6 d-block">Current Year</h6>
+                <p class="m-0">8</p>
                 </div>
                 </div>
                 </div>
                 <div class="white_box card_height_50 mb_30">
                 <div class="box_header border_bottom_1px  ">
                 <div class="main-title">
-                <h3 class="mb_25">Total Death Report</h3>
+                <h3 class="mb_25">Total Number of reporters</h3>
                 </div>
                 </div>
                 <div id="chart-8"></div>
@@ -361,13 +526,15 @@ class Dashboard extends Component {
                 <p class="m-0">358</p>
                 </div>
                 <div class="col-sm-6">
-                <h6 class="heading_6 d-block">Current Month</h6>
+                <h6 class="heading_6 d-block"> Current Year</h6>
                 <p class="m-0">194</p>
                 </div>
                 </div>
                 </div>
                 </div>
-                <div class="col-xl-12">
+
+                
+                {/* <div class="col-xl-12">
                 <div class="white_box card_height_100">
                 <div class="box_header border_bottom_1px  ">
                 <div class="main-title">
@@ -441,7 +608,10 @@ class Dashboard extends Component {
                 </div>
                 </div>
                 </div>
-                </div>
+                </div> */}
+
+
+                
                 <div class="col-xl-6">
                 <div class="white_box card_height_100">
                 <div class="box_header border_bottom_1px  ">
@@ -487,53 +657,7 @@ class Dashboard extends Component {
                 </div>
                 </div>
                 </div>
-                <div class="col-xl-6">
-                <div class="white_box mb_30">
-                <div class="box_header border_bottom_1px  ">
-                <div class="main-title">
-                <h3 class="mb_25">Recent Activity</h3>
-                </div>
-                </div>
-                <div class="activity_progressbar">
-                <div class="single_progressbar">
-                <h6>USA</h6>
-                <div id="bar1" class="barfiller">
-                <div class="tipWrap">
-                <span class="tip"></span>
-                </div>
-                <span class="fill" data-percentage="95"></span>
-                </div>
-                </div>
-                <div class="single_progressbar">
-                <h6>AFRICA</h6>
-                <div id="bar2" class="barfiller">
-                <div class="tipWrap">
-                <span class="tip"></span>
-                </div>
-                <span class="fill" data-percentage="75"></span>
-                </div>
-                </div>
-                <div class="single_progressbar">
-                <h6>UK</h6>
-                <div id="bar3" class="barfiller">
-                <div class="tipWrap">
-                <span class="tip"></span>
-                </div>
-                <span class="fill" data-percentage="55"></span>
-                </div>
-                </div>
-                <div class="single_progressbar">
-                <h6>CANADA</h6>
-                <div id="bar4" class="barfiller">
-                <div class="tipWrap">
-                <span class="tip"></span>
-                </div>
-                <span class="fill" data-percentage="25"></span>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
+                
                 </div>
                 </div>
                 </div>

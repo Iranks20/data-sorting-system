@@ -74,7 +74,7 @@ function Register() {
                     <input type="text" className="form-control" placeholder="by who" value={by_who} onChange={(e) => setBy_who (e.target.value)}  />
                 </div>
                 <div className="mb-3">
-                <input type="password" className="form-control" placeholder="to whom" value={to_whom} onChange={(e) => setTo_whom (e.target.value)} />
+                <input type="text" className="form-control" placeholder="to whom" value={to_whom} onChange={(e) => setTo_whom (e.target.value)} />
                 </div>
                 <div className="mb-3">
                     <input type="text" className="form-control" placeholder="Enter details of the incidenbce" value={details} onChange={(e) => setDetails (e.target.value)} /> 

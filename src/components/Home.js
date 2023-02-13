@@ -106,7 +106,7 @@ let handleSubmit = async (e) => {
                 <input type="text" className="form-control" placeholder="nationality" value={nationality} onChange={(e) => setNationality(e.target.value)} />
             </div>
             <div className="mb-3">
-            <input type="password" className="form-control" placeholder="occupation" value={occupation} onChange={(e) => setOccupation(e.target.value)} />
+            <input type="text" className="form-control" placeholder="occupation" value={occupation} onChange={(e) => setOccupation(e.target.value)} />
             </div>
             <div className="cs_check_box">
             <input type="checkbox" id="check_box" className="common_checkbox" />
