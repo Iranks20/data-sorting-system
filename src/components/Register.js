@@ -19,7 +19,7 @@ function Register() {
         e.preventDefault();
         SetLoading(true)
         try{
-            await fetch("http://localhost:5000/api/v1/incidences", {
+            await fetch("http://3.239.32.201:5000/api/v1/incidences", {
                 method: "POST",
                 body: JSON.stringify({
                    incident: incident,
@@ -105,7 +105,7 @@ function Register() {
                     isLoading ? <Button><Spinner animation="border" variant="light" /></Button> : <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input>
                 }
                 </div>
-                <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input>
+                {/* <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input> */}
                 {/* <a href="#" className="btn_1 full_width text-center"> Report incident</a> */}
             </form>
             </div>

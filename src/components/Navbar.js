@@ -32,16 +32,16 @@ function Navbar() {
             <ul>
             <li><a class="active">Incidences</a>
             <ul>
-            <li><a href="/daily_incidence">daily incidence</a></li>
-            <li><a href="/weekly_incidence">weekly incidence</a></li>
-            <li><a href="/monthly_incidence">monthly incidence</a></li>
+            <li><a href="/reporting/#/daily_incidence">daily incidence</a></li>
+            <li><a href="/reporting/#/weekly_incidence">weekly incidence</a></li>
+            <li><a href="/reporting/#/monthly_incidence">monthly incidence</a></li>
             </ul>
             </li>
             <li><a class="active">Reporters</a>
             <ul>
-            <li><a href="/daily_reporters">Daily Reporters</a></li>
-            <li><a href="/weekly_reporters">Weekly Reporters</a></li>
-            <li><a href="/monthly_reporters">monthly Reporters</a></li>
+            <li><a href="/reporting/#/daily_reporters">Daily Reporters</a></li>
+            <li><a href="/reporting/#/weekly_reporters">Weekly Reporters</a></li>
+            <li><a href="/reporting/#/monthly_reporters">monthly Reporters</a></li>
             </ul>
             </li>
             </ul>

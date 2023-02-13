@@ -47,7 +47,7 @@ function Login() {
             <div class="">
             <input type="password" class="form-control" placeholder="Password" />
             </div>
-            <a href="index.html" class="btn_1 full_width text-center">Log in</a>
+            <a href="/reporting/#/dashboard" class="btn_1 full_width text-center">Log in</a>
             <div class="text-center">
             <a href="forgot_pass.html" data-bs-toggle="modal" data-bs-target="#forgot_password" data-bs-dismiss="modal" class="pass_forget_btn">Forget Password?</a>
             </div>

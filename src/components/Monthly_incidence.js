@@ -13,7 +13,7 @@ class Monthly_incidence extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/api/v1/incidences/monthly")
+    fetch("http://3.239.32.201:5000/api/v1/incidences/monthly")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)
