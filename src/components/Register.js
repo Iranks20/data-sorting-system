@@ -1,7 +1,11 @@
 import React, {useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Button, Spinner } from "react-bootstrap";
 
 
 function Register() {
+    const [isLoading, SetLoading] = useState(false);
     const [incident, setIncident] = useState("");
     const [location, setLocation] = useState("");
     const [cordinates, setCordinates] = useState("");
@@ -13,6 +17,7 @@ function Register() {
 
     let handleSubmit = async (e) => {
         e.preventDefault();
+        SetLoading(true)
         try{
             await fetch("http://localhost:5000/api/v1/incidences", {
                 method: "POST",
@@ -33,6 +38,17 @@ function Register() {
             }).then(results => results.json())
             .then((response) => {
                 console.log(response)
+                if (response.error === false) {
+                    toast(response.message)
+                    SetLoading(false)
+            
+                    } else if (response.status === 403){
+                    SetLoading(false)
+                    toast(response.message)
+                    } else {
+                    SetLoading(false)
+                    toast("invalid data types")
+                    }
             })
         }  catch (err) {
             console.log('server error');
@@ -40,6 +56,7 @@ function Register() {
     };
   return (
     <div className="crm_body_bg">
+        <ToastContainer />
         <section>
             <div className="main_content_iner ">
             <div className="container-fluid p-0">
@@ -83,6 +100,11 @@ function Register() {
                 <input type="checkbox" id="check_box" className="common_checkbox" />
 
                 </div>
+                <div>	 
+                {
+                    isLoading ? <Button><Spinner animation="border" variant="light" /></Button> : <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input>
+                }
+                </div>
                 <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input>
                 {/* <a href="#" className="btn_1 full_width text-center"> Report incident</a> */}
             </form>
@@ -100,7 +122,7 @@ function Register() {
             <div className="row">
             <div className="col-lg-12">
             <div className="footer_iner text-center">
-            <p>2020 © Influence - Designed by <a href="#"> <i className="ti-heart"></i> </a><a href="#"> Dashboard</a></p>
+            <p>2020 © Influence - Designed by <a> <i className="ti-heart"></i> </a><a> Dashboard</a></p>
             </div>
             </div>
             </div>

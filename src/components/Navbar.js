@@ -30,7 +30,7 @@ function Navbar() {
             <span>Forms</span>
             </a> */}
             <ul>
-            <li><a class="active" href="#">Incidences</a>
+            <li><a class="active">Incidences</a>
             <ul>
             <li><a href="/daily_incidence">daily incidence</a></li>
             <li><a href="/weekly_incidence">weekly incidence</a></li>
