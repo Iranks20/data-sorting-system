@@ -13,7 +13,7 @@ class Weekly_incidence extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://3.239.32.201:5000/api/v1/incidences/weekly")
+    fetch("http://localhost:5000/api/v1/incidences/weekly")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)

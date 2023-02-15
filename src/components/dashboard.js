@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Upperbar from './Upperbar'
+import Side_nav from './Side_nav'
 
 class Dashboard extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class Dashboard extends Component {
         };
       }
       componentDidMount() {
-        fetch("http://3.239.32.201:5000/api/v1/incidences/dailycounts")
+        fetch("http://localhost:5000/api/v1/incidences/dailycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -29,7 +30,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://3.239.32.201:5000/api/v1/incidences/weeklycounts")
+        fetch("http://localhost:5000/api/v1/incidences/weeklycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -39,7 +40,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://3.239.32.201:5000/api/v1/incidences/monthlycounts")
+        fetch("http://localhost:5000/api/v1/incidences/monthlycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -49,7 +50,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://3.239.32.201:5000/api/v1/incidences/countall")
+        fetch("http://localhost:5000/api/v1/incidences/countall")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -59,7 +60,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://3.239.32.201:5000/api/v1/reporters/dailycounts")
+        fetch("http://localhost:5000/api/v1/reporters/dailycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -69,7 +70,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://3.239.32.201:5000/api/v1/reporters/weeklycounts")
+        fetch("http://localhost:5000/api/v1/reporters/weeklycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -79,7 +80,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://3.239.32.201:5000/api/v1/reporters/monthlycounts")
+        fetch("http://localhost:5000/api/v1/reporters/monthlycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -89,7 +90,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://3.239.32.201:5000/api/v1/reporters/allreporters")
+        fetch("http://localhost:5000/api/v1/reporters/allreporters")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -106,9 +107,11 @@ class Dashboard extends Component {
         return(
             <div class="crm_body_bg">
                                
+                {/* <Side_nav />  */}
                  <Navbar />
 
                 <section class="main_content dashboard_part">
+                {/* <Side_nav /> */}
 
                 <Upperbar />
 
@@ -264,236 +267,7 @@ class Dashboard extends Component {
                 <div id="bar_wev"></div>
                 </div>
                 </div>
-                {/* <div class="col-xl-7">
-                <div class="white_box QA_section card_height_100">
-                <div class="white_box_tittle list_header m-0 align-items-center">
-                <div class="main-title mb-sm-15">
-                <h3 class="m-0 nowrap">Patients</h3>
-                </div>
-                <div class="box_right d-flex lms_block">
-                <div class="serach_field-area2">
-                <div class="search_inner">
-                <form Active="#">
-                <div class="search_field">
-                <input type="text" placeholder="Search here..." />
-                </div>
-                <button type="submit"> <i class="ti-search"></i> </button>
-                </form>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="QA_table ">
-
-                <table class="table lms_table_active2">
-                <thead>
-                <tr>
-                <th scope="col">Patients Name</th>
-                <th scope="col">department</th>
-                <th scope="col">Appointment Date</th>
-                <th scope="col">Serial Number</th>
-                <th scope="col">Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <th scope="row">
-                <div class="patient_thumb d-flex align-items-center">
-                <div class="student_list_img mr_20">
-                <img src="assets/img/patient/pataint.png" alt="" srcset="" />
-                </div>
-                <p>Jhon Kural</p>
-                </div>
-                </th>
-                <td>Monte Carlo</td>
-                <td>11/03/2020</td>
-                <td>MDC65454</td>
-                <td>
-                <div class="amoutn_action d-flex align-items-center">
-                $29,192
-                <div class="dropdown ms-4">
-                <a class=" dropdown-toggle hide_pils" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-ellipsis-v"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">View</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <a class="dropdown-item" href="#">Delete</a>
-                </div>
-                </div>
-                </div> </td>
-                </tr>
-                <tr>
-                <th scope="row">
-                <div class="patient_thumb d-flex align-items-center">
-                <div class="student_list_img mr_20">
-                <img src="assets/img/patient/2.png" alt="" srcset="" />
-                </div>
-                <p>Jhon Kural</p>
-                </div>
-                </th>
-                <td>Monte Carlo</td>
-                <td>11/03/2020</td>
-                <td>MDC65454</td>
-                <td>
-                <div class="amoutn_action d-flex align-items-center">
-                $29,192
-                <div class="dropdown ms-4">
-                <a class=" dropdown-toggle hide_pils" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-ellipsis-v"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">View</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <a class="dropdown-item" href="#">Delete</a>
-                </div>
-                </div>
-                </div> </td>
-                </tr>
-                <tr>
-                <th scope="row">
-                <div class="patient_thumb d-flex align-items-center">
-                <div class="student_list_img mr_20">
-                <img src="assets/img/patient/3.png" alt="" srcset="" />
-                </div>
-                <p>Jhon Kural</p>
-                </div>
-                </th>
-                <td>Monte Carlo</td>
-                <td>11/03/2020</td>
-                <td>MDC65454</td>
-                <td>
-                <div class="amoutn_action d-flex align-items-center">
-                $29,192
-                <div class="dropdown ms-4">
-                <a class=" dropdown-toggle hide_pils" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-ellipsis-v"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">View</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <a class="dropdown-item" href="#">Delete</a>
-                </div>
-                </div>
-                </div> </td>
-                </tr>
-                <tr>
-                <th scope="row">
-                <div class="patient_thumb d-flex align-items-center">
-                <div class="student_list_img mr_20">
-                <img src="assets/img/patient/4.png" alt="" srcset="" />
-                </div>
-                <p>Jhon Kural</p>
-                </div>
-                </th>
-                <td>Monte Carlo</td>
-                <td>11/03/2020</td>
-                <td>MDC65454</td>
-                <td>
-                <div class="amoutn_action d-flex align-items-center">
-                $29,192
-                <div class="dropdown ms-4">
-                <a class=" dropdown-toggle hide_pils" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-ellipsis-v"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">View</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <a class="dropdown-item" href="#">Delete</a>
-                </div>
-                </div>
-                </div> </td>
-                </tr>
-                <tr>
-                <th scope="row">
-                <div class="patient_thumb d-flex align-items-center">
-                <div class="student_list_img mr_20">
-                <img src="assets/img/patient/5.png" alt="" srcset="" />
-                </div>
-                <p>Jhon Kural</p>
-                </div>
-                </th>
-                <td>Monte Carlo</td>
-                <td>11/03/2020</td>
-                <td>MDC65454</td>
-                <td>
-                <div class="amoutn_action d-flex align-items-center">
-                $29,192
-                <div class="dropdown ms-4">
-                <a class=" dropdown-toggle hide_pils" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-ellipsis-v"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">View</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <a class="dropdown-item" href="#">Delete</a>
-                </div>
-                </div>
-                </div> </td>
-                </tr>
-                <tr>
-                <th scope="row">
-                <div class="patient_thumb d-flex align-items-center">
-                <div class="student_list_img mr_20">
-                <img src="assets/img/patient/6.png" alt="" srcset="" />
-                </div>
-                <p>Jhon Kural</p>
-                </div>
-                </th>
-                <td>Monte Carlo</td>
-                <td>11/03/2020</td>
-                <td>MDC65454</td>
-                <td>
-                <div class="amoutn_action d-flex align-items-center">
-                $29,192
-                <div class="dropdown ms-4">
-                <a class=" dropdown-toggle hide_pils" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-ellipsis-v"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">View</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <a class="dropdown-item" href="#">Delete</a>
-                </div>
-                </div>
-                </div> </td>
-                </tr>
-                <tr>
-                <th scope="row">
-                <div class="patient_thumb d-flex align-items-center">
-                <div class="student_list_img mr_20">
-                <img src="assets/img/patient/6.png" alt="" srcset="" />
-                </div>
-                <p>Jhon Kural</p>
-                </div>
-                </th>
-                <td>Monte Carlo</td>
-                <td>11/03/2020</td>
-                <td>MDC65454</td>
-                <td>
-                <div class="amoutn_action d-flex align-items-center">
-                $29,192
-                <div class="dropdown ms-4">
-                <a class=" dropdown-toggle hide_pils" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-ellipsis-v"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">View</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <a class="dropdown-item" href="#">Delete</a>
-                </div>
-                </div>
-                </div> </td>
-                </tr>
-                </tbody>
-                </table>
-                </div>
-                </div>
-                </div> */}
-
-
-
-
+              
                 <div class="col-xl-5 ">
                 <div class="white_box card_height_50 mb_30">
                 <div class="box_header border_bottom_1px  ">
@@ -532,86 +306,7 @@ class Dashboard extends Component {
                 </div>
                 </div>
                 </div>
-
-                
-                {/* <div class="col-xl-12">
-                <div class="white_box card_height_100">
-                <div class="box_header border_bottom_1px  ">
-                <div class="main-title">
-                <h3 class="mb_25">Hospital Staff</h3>
-                </div>
-                </div>
-                <div class="staf_list_wrapper sraf_active owl-carousel">
-
-                <div class="single_staf">
-                <div class="staf_thumb">
-                <img src="assets/img/staf/1.png" alt="" />
-                </div>
-                <h4>Dr. Sysla J Smith</h4>
-                <p>Doctor</p>
-                </div>
-
-                <div class="single_staf">
-                <div class="staf_thumb">
-                <img src="assets/img/staf/2.png" alt="" />
-                </div>
-                <h4>Dr. Sysla J Smith</h4>
-                <p>Doctor</p>
-                </div>
-
-                <div class="single_staf">
-                <div class="staf_thumb">
-                <img src="assets/img/staf/3.png" alt="" />
-                </div>
-                <h4>Dr. Sysla J Smith</h4>
-                <p>Doctor</p>
-                </div>
-
-                <div class="single_staf">
-                <div class="staf_thumb">
-                <img src="assets/img/staf/4.png" alt="" />
-                </div>
-                <h4>Dr. Sysla J Smith</h4>
-                <p>Doctor</p>
-                </div>
-
-                <div class="single_staf">
-                <div class="staf_thumb">
-                <img src="assets/img/staf/5.png" alt="" />
-                </div>
-                <h4>Dr. Sysla J Smith</h4>
-                <p>Doctor</p>
-                </div>
-
-                <div class="single_staf">
-                <div class="staf_thumb">
-                <img src="assets/img/staf/1.png" alt="" />
-                </div>
-                <h4>Dr. Sysla J Smith</h4>
-                <p>Doctor</p>
-                </div>
-
-                <div class="single_staf">
-                <div class="staf_thumb">
-                <img src="assets/img/staf/2.png" alt="" />
-                </div>
-                <h4>Dr. Sysla J Smith</h4>
-                <p>Doctor</p>
-                </div>
-
-                <div class="single_staf">
-                <div class="staf_thumb">
-                <img src="assets/img/staf/3.png" alt="" />
-                </div>
-                <h4>Dr. Sysla J Smith</h4>
-                <p>Doctor</p>
-                </div>
-                </div>
-                </div>
-                </div> */}
-
-
-                
+               
                 <div class="col-xl-6">
                 <div class="white_box card_height_100">
                 <div class="box_header border_bottom_1px  ">

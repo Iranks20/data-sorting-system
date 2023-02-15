@@ -15,6 +15,7 @@ import Monthly_incidence from './components/Monthly_incidence';
 import Daily_reporters from './components/Daily_reporters';
 import Weekly_reporters from './components/Weekly_reporters';
 import Monthly_reporters from './components/Monthly_reporters';
+import Side_nav from './components/Side_nav';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path='/daily_reporters' element= {<Daily_reporters />} />
         <Route path='/weekly_reporters' element= {<Weekly_reporters />} />
         <Route path='/Monthly_reporters' element= {<Monthly_reporters />} />
+        <Route path='/side_nav' element= {<Side_nav />} />
       </Routes>
     </div>
   );
