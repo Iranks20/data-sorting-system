@@ -37,62 +37,76 @@ function Side_nav() {
 			height: "100%" }}>
 			<Toolbar />
 			<Divider />
-			<Typography
+			{/* <Typography
 				sx={{ textAlign: "center", pt: 4,
 					color: "green", fontSize: 20 }}
 			>
 				GeeksforGeeks
-			</Typography>
-			<List sx={{ backgroundColor: "#09212E" }}>
+			</Typography> */}
+						<List sx={{ backgroundColor: "#09212E" }}>
 				<ListItemButton sx={{ color: "white" }}>
 					<ListItemIcon sx={{ color: "white" }}>
-						{<Help />}
 					</ListItemIcon>
-					<ListItemText primary={"How to write"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }}>
+				<ListItemButton sx={{ color: "white" }} href="/dashboard">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<CollectionsBookmark />}
 					</ListItemIcon>
-					<ListItemText primary={"Posts"} />
+					<ListItemText primary={"DASHBOARD"} />
 				</ListItemButton>
+				
+			</List>
+			<Divider />
+
+			<List sx={{ backgroundColor: "#09212E" }}>
 				<ListItemButton sx={{ color: "white" }}>
+					<ListItemIcon sx={{ color: "white" }}>
+						
+					</ListItemIcon>
+					<ListItemText primary={"INCIDENCES"} />
+				</ListItemButton>
+				<ListItemButton sx={{ color: "white" }} href="/daily_incidence">
+					<ListItemIcon sx={{ color: "white" }}>
+						{<CollectionsBookmark />}
+					</ListItemIcon>
+					<ListItemText primary={"Daily Incidences"} />
+				</ListItemButton>
+				<ListItemButton sx={{ color: "white" }} href="/weekly_incidence">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<UploadFile />}
 					</ListItemIcon>
-					<ListItemText primary={"Pick Article"} />
+					<ListItemText primary={"Weekly Incidences"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }}>
+				<ListItemButton sx={{ color: "white" }} href="/monthly_incidence">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<Edit />}
 					</ListItemIcon>
-					<ListItemText primary={"Improve"} />
+					<ListItemText primary={"Monthly Incidences"} />
 				</ListItemButton>
 			</List>
 			<Divider />
 			<List>
 				<ListItemButton sx={{ color: "white" }}>
 					<ListItemIcon sx={{ color: "white" }}>
-						{<Edit />}
 					</ListItemIcon>
-					<ListItemText primary={"Suggest"} />
+					<ListItemText primary={"REPORTERS"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }}>
+				<ListItemButton sx={{ color: "white" }} href="/daily_reporters">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<Work />}
 					</ListItemIcon>
-					<ListItemText primary={"Work with us"} />
+					<ListItemText primary={"Daily Reporters"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }}>
+				<ListItemButton sx={{ color: "white" }} href="/weekly_reporters">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<PermMedia />}
 					</ListItemIcon>
-					<ListItemText primary={"Media"} />
+					<ListItemText primary={"Weekly Reporters"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }}>
+				<ListItemButton sx={{ color: "white" }} href="/monthly_reporters">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<Feedback />}</ListItemIcon>
-					<ListItemText primary={"Contact us"} />
+					<ListItemText primary={"Monthly Reporters"} />
 				</ListItemButton>
 			</List>
 			<Typography
@@ -105,7 +119,7 @@ function Side_nav() {
 					margin: 2,
 				}}
 			>
-				Sign In
+				Log Out
 			</Typography>
 		</div>
 	);
@@ -132,10 +146,16 @@ function Side_nav() {
 							>
 								<MenuIcon />
 							</IconButton>
-							<Typography variant="h6">
-								Welcome to GeeksforGeeks Write Portal
+							<Typography variant="h6" width="700px">
+								Welcome To Admin Portal
 							</Typography>
+							<ListItemButton sx={{ color: "white", backgroundColor: "red" }} href="/home">
+								<ListItemIcon sx={{ color: "white" }}>
+								</ListItemIcon>
+								<ListItemText primary={"ADD NEW INCIDENCE/REPORTERS"} />
+							</ListItemButton>
 						</Toolbar>
+						
 					</AppBar>
 					<Box
 						component="nav"

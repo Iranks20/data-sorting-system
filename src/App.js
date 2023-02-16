@@ -17,6 +17,7 @@ import Weekly_reporters from './components/Weekly_reporters';
 import Monthly_reporters from './components/Monthly_reporters';
 import Side_nav from './components/Side_nav';
 
+
 function App() {
   return (
     <div className="App">
@@ -25,9 +26,9 @@ function App() {
         <Route path='/navbar' element= {<Navbar />} />
         <Route path='/footer' element= {<Footer />} />
         {/* <Route path='/upperbar' element= {<upperbar />} /> */}
-        <Route path='/' element= {<Home />} />
+        <Route path='/home' element= {<Home />} />
         <Route path='/register' element= {<Register />} />
-        <Route path='/login' element= {<Login />} />
+        <Route path='/' element= {<Login />} />
         <Route path='/daily_incidence' element= {<Daily_incidence />} />
         <Route path='/weekly_incidence' element= {<Weekly_incidence />} />
         <Route path='/monthly_incidence' element= {<Monthly_incidence />} />
@@ -35,6 +36,7 @@ function App() {
         <Route path='/weekly_reporters' element= {<Weekly_reporters />} />
         <Route path='/Monthly_reporters' element= {<Monthly_reporters />} />
         <Route path='/side_nav' element= {<Side_nav />} />
+       
       </Routes>
     </div>
   );

@@ -10,14 +10,6 @@ function Login() {
             <div class="row">
             <div class="col-lg-12 p-0">
             <div class="header_iner d-flex justify-content-between align-items-center">
-            <div class="sidebar_icon d-lg-none">
-            <i class="ti-menu"></i>
-            </div>
-            <div class="serach_field-area">
-            <div class="search_inner">
-
-            </div>
-            </div>
             <div class="header_right d-flex justify-content-between align-items-center">
 
             </div>
@@ -25,7 +17,10 @@ function Login() {
             </div>
             </div>
 
-
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <div class="main_content_iner ">
             <div class="container-fluid p-0">
             <div class="row justify-content-center">
@@ -47,7 +42,7 @@ function Login() {
             <div class="">
             <input type="password" class="form-control" placeholder="Password" />
             </div>
-            <a href="/reporting/#/dashboard" class="btn_1 full_width text-center">Log in</a>
+            <a href="/dashboard" class="btn_1 full_width text-center">Log in</a>
             <div class="text-center">
             <a href="forgot_pass.html" data-bs-toggle="modal" data-bs-target="#forgot_password" data-bs-dismiss="modal" class="pass_forget_btn">Forget Password?</a>
             </div>
@@ -61,7 +56,7 @@ function Login() {
             </div>
             </div>
 
-            <div class="footer_part">
+            {/* <div class="footer_part">
             <div class="container">
             <div class="row">
             <div class="col-lg-12">
@@ -71,7 +66,7 @@ function Login() {
             </div>
             </div>
             </div>
-            </div>
+            </div> */}
             </div>
             </div>
             </section>

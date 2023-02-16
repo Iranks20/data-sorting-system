@@ -14,7 +14,7 @@ class Weekly_reporters extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/api/v1/reporters/weekly")
+    fetch("http://18.234.145.70:5000/api/v1/reporters/weekly")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)
@@ -59,7 +59,7 @@ class Weekly_reporters extends React.Component {
            </div>
            </div>
            <div class="add_button ms-2">
-           <a href="/register" data-bs-toggle="modal" data-bs-target="#addcategory" class="btn_1">Add New</a>
+           <a class="btn_1">DELETE</a>
            </div>
            </div>
            </div>

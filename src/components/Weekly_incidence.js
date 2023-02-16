@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Upperbar from './Upperbar'
+import Side_nav from './Side_nav';
 
 class Weekly_incidence extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Weekly_incidence extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/api/v1/incidences/weekly")
+    fetch("http://18.234.145.70:5000/api/v1/incidences/weekly")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)
@@ -29,11 +30,15 @@ class Weekly_incidence extends React.Component {
         <h1> Pleses wait some time.... </h1> </div> ;
     return (
       <div class="crm_body_bg">
-      <Navbar />
+      {/* <Navbar /> */}
+      <Side_nav />
    
            <section class="main_content dashboard_part">
+           <br></br>
+            <br></br>
+            <br></br>
    
-           <Upperbar />
+           {/* <Upperbar /> */}
    
            <div class="main_content_iner ">
            <div class="container-fluid p-0">
@@ -54,7 +59,7 @@ class Weekly_incidence extends React.Component {
            </div>
            </div>
            <div class="add_button ms-2">
-           <a href="/register" data-bs-toggle="modal" data-bs-target="#addcategory" class="btn_1">Add New</a>
+           <a class="btn_1">DELETE</a>
            </div>
            </div>
            </div>

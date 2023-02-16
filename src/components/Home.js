@@ -26,7 +26,7 @@ let handleSubmit = async (e) => {
     SetLoading(true)
     e.preventDefault();
     try {
-    await fetch("http://3.239.32.201:5000/api/v1/reporters", {
+    await fetch("http://18.234.145.70:5000/api/v1/reporters", {
         method: "POST",
         headers: {
         "Content-Type": "application/json"
@@ -117,7 +117,7 @@ let handleSubmit = async (e) => {
                 isLoading ? <Button><Spinner animation="border" variant="light" /></Button> : <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input>
             }
             </div>
-            <p>Admin? <a href="/reporting/#/login">Log in</a></p>
+            {/* <p>Admin? <a href="/reporting/#/login">Log in</a></p> */}
             </form>
             </div>
             </div>

@@ -2,15 +2,17 @@ import React, {useState} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button, Spinner } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 
 function Register() {
+    let navigate = useNavigate();
     const [isLoading, SetLoading] = useState(false);
     const [incident, setIncident] = useState("");
     const [location, setLocation] = useState("");
     const [cordinates, setCordinates] = useState("");
-    const [time, setTime] = useState("");
-    const [date, setDate] = useState("");
+    // const [time, setTime] = useState("");
+    // const [date, setDate] = useState("");
     const [by_who, setBy_who] = useState("");
     const [to_whom, setTo_whom] = useState("");
     const [details, setDetails] = useState("");
@@ -19,14 +21,14 @@ function Register() {
         e.preventDefault();
         SetLoading(true)
         try{
-            await fetch("http://3.239.32.201:5000/api/v1/incidences", {
+            await fetch("http://18.234.145.70:5000/api/v1/incidences", {
                 method: "POST",
                 body: JSON.stringify({
                    incident: incident,
                    location: location,
                    cordinates: cordinates,
-                   time: time,
-                   date: date,
+                //    time: time,
+                //    date: date,
                    by_who: by_who,
                    to_whom: to_whom,
                    details: details
@@ -41,6 +43,7 @@ function Register() {
                 if (response.error === false) {
                     toast(response.message)
                     SetLoading(false)
+                    navigate("/dashboard");
             
                     } else if (response.status === 403){
                     SetLoading(false)
@@ -81,12 +84,12 @@ function Register() {
                 <div className="mb-3">
                     <input type="text" className="form-control" placeholder="Enter your cordinates" value={cordinates} onChange={(e) => setCordinates (e.target.value)} />
                 </div>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                     <input type="text" className="form-control" placeholder="Enter your time" value={time} onChange={(e) => setTime (e.target.value)} />
                 </div>
                 <div className="mb-3">
                     <input type="text" className="form-control" placeholder="Enter date" value={date} onChange={(e) => setDate (e.target.value)} />
-                </div>
+                </div> */}
                 <div className="mb-3">
                     <input type="text" className="form-control" placeholder="by who" value={by_who} onChange={(e) => setBy_who (e.target.value)}  />
                 </div>
