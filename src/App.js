@@ -9,13 +9,13 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
-import Daily_incidence from './components/Daily_incidence';
-import Weekly_incidence from './components/Weekly_incidence';
-import Monthly_incidence from './components/Monthly_incidence';
-import Daily_reporters from './components/Daily_reporters';
-import Weekly_reporters from './components/Weekly_reporters';
-import Monthly_reporters from './components/Monthly_reporters';
-import Side_nav from './components/Side_nav';
+import DailyIncidence from './components/Daily_incidence';
+import WeeklyIncidence from './components/Weekly_incidence';
+import MonthlyIncidence from './components/Monthly_incidence';
+import DailyReporters from './components/Daily_reporters';
+import WeeklyReporters from './components/Weekly_reporters';
+import MonthlyReporters from './components/Monthly_reporters';
+import SideNav from './components/Side_nav';
 
 
 function App() {
@@ -29,13 +29,13 @@ function App() {
         <Route path='/home' element= {<Home />} />
         <Route path='/register' element= {<Register />} />
         <Route path='/' element= {<Login />} />
-        <Route path='/daily_incidence' element= {<Daily_incidence />} />
-        <Route path='/weekly_incidence' element= {<Weekly_incidence />} />
-        <Route path='/monthly_incidence' element= {<Monthly_incidence />} />
-        <Route path='/daily_reporters' element= {<Daily_reporters />} />
-        <Route path='/weekly_reporters' element= {<Weekly_reporters />} />
-        <Route path='/Monthly_reporters' element= {<Monthly_reporters />} />
-        <Route path='/side_nav' element= {<Side_nav />} />
+        <Route path='/daily_incidence' element= {<DailyIncidence />} />
+        <Route path='/weekly_incidence' element= {<WeeklyIncidence />} />
+        <Route path='/monthly_incidence' element= {<MonthlyIncidence />} />
+        <Route path='/daily_reporters' element= {<DailyReporters />} />
+        <Route path='/weekly_reporters' element= {<WeeklyReporters />} />
+        <Route path='/Monthly_reporters' element= {<MonthlyReporters />} />
+        <Route path='/side_nav' element= {<SideNav />} />
        
       </Routes>
     </div>

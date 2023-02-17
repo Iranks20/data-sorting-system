@@ -17,7 +17,6 @@ import {
 	CollectionsBookmark,
 	Edit,
 	Feedback,
-	Help,
 	PermMedia,
 	UploadFile,
 	Work,
@@ -37,12 +36,7 @@ function Side_nav() {
 			height: "100%" }}>
 			<Toolbar />
 			<Divider />
-			{/* <Typography
-				sx={{ textAlign: "center", pt: 4,
-					color: "green", fontSize: 20 }}
-			>
-				GeeksforGeeks
-			</Typography> */}
+
 						<List sx={{ backgroundColor: "#09212E" }}>
 				<ListItemButton sx={{ color: "white" }}>
 					<ListItemIcon sx={{ color: "white" }}>
@@ -193,37 +187,6 @@ function Side_nav() {
 							{responsiveDrawer}
 						</Drawer>
 					</Box>
-					{/* <Box
-						component="main"
-						sx={{
-							flexGrow: 1,
-							p: 3,
-							width: { sm: `calc(100% - ${drawWidth}px)` },
-						}}
-					>
-						<Toolbar />
-						<Typography paragraph>
-							GeeksforGeeks provides Free Tutorials,
-							Millions of Articles, Live,
-							Online and Classroom Courses ,Frequent
-							Coding Competitions, Webinars by Industry
-							Experts, Internship opportunities and Job
-							Opportunities. It provides all the
-							individuals with a ‘Contribute’
-							feature on their platform where they
-							can come to write on a particular topic
-							and share it with everyone and helps you to
-							enhance your knowledge and expertise
-							of particular subjects and
-							allows you to showcase your research
-							and writing skills to all
-							others across the world. Not only
-							this but you’ll also get
-							rewarded for it in the form of
-							remuneration, internship
-							opportunities, discount offers, etc.
-						</Typography>
-					</Box> */}
 				</Box>
 			</div>
 		</div>

@@ -1,8 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Footer from './Footer'
-import Upperbar from './Upperbar'
-import Side_nav from './Side_nav';
+import SideNav from './Side_nav';
 
 
 class Daily_reporters extends React.Component {
@@ -34,7 +32,7 @@ class Daily_reporters extends React.Component {
     return (
       <div class="crm_body_bg">
       {/* <Navbar /> */}
-      <Side_nav />
+      <SideNav />
    
            <section class="main_content dashboard_part">
            <br></br>

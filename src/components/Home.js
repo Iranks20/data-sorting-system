@@ -133,7 +133,7 @@ let handleSubmit = async (e) => {
             <div className="row">
             <div className="col-lg-12">
             <div className="footer_iner text-center">
-            <p>2020 © Influence - Designed by <a> <i className="ti-heart"></i> </a><a> Dashboard</a></p>
+            <p>2020 © Influence - Designed by <a href="#"> <i className="ti-heart"></i> </a><a href="#"> Dashboard</a></p>
             </div>
             </div>
             </div>

@@ -1,8 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Footer from './Footer'
-import Upperbar from './Upperbar'
-import Side_nav from './Side_nav';
+import SideNav from './Side_nav';
 
 class Weekly_incidence extends React.Component {
   constructor(props) {
@@ -31,7 +29,7 @@ class Weekly_incidence extends React.Component {
     return (
       <div class="crm_body_bg">
       {/* <Navbar /> */}
-      <Side_nav />
+      <SideNav />
    
            <section class="main_content dashboard_part">
            <br></br>
@@ -59,7 +57,7 @@ class Weekly_incidence extends React.Component {
            </div>
            </div>
            <div class="add_button ms-2">
-           <a class="btn_1">DELETE</a>
+           <a class="btn_1" href="#">DELETE</a>
            </div>
            </div>
            </div>

@@ -1,8 +1,5 @@
 import React, {Component} from 'react'
-import Footer from './Footer'
-import Navbar from './Navbar'
-import Upperbar from './Upperbar'
-import Side_nav from './Side_nav'
+import SideNav from './Side_nav'
 
 class Dashboard extends Component {
     constructor(props) {
@@ -107,7 +104,7 @@ class Dashboard extends Component {
         return(
             <div class="crm_body_bg">
                                
-                <Side_nav /> 
+                <SideNav /> 
                  {/* <Navbar /> */}
 
                 <section class="main_content dashboard_part">
