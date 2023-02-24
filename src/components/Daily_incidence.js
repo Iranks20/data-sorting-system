@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import SideNav from './Side_nav';
+// import Modalz from './Modalz';
 
 class Daily_incidence extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Daily_incidence extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://18.234.145.70:5000/api/v1/incidences/daily")
+    fetch("http://localhost:5000/api/v1/incidences/daily")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)
@@ -57,7 +58,8 @@ class Daily_incidence extends React.Component {
            </div>
            </div>
            <div class="add_button ms-2">
-           <a href="#" data-bs-toggle="modal" data-bs-target="#addcategory" class="btn_1">DELETE</a>
+            {/* <Modalz /> */}
+           <a href="#" data-bs-toggle="modal" data-bs-target="#addcategory" class="btn_1">delete</a>
            </div>
            </div>
            </div>

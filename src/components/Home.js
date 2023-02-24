@@ -26,7 +26,7 @@ let handleSubmit = async (e) => {
     SetLoading(true)
     e.preventDefault();
     try {
-    await fetch("http://18.234.145.70:5000/api/v1/reporters", {
+    await fetch("http://localhost:5000/api/v1/reporters", {
         method: "POST",
         headers: {
         "Content-Type": "application/json"
@@ -128,7 +128,7 @@ let handleSubmit = async (e) => {
             </div>
             </div>
 
-            <div>
+            {/* <div>
             <div className="container-fluid">
             <div className="row">
             <div className="col-lg-12">
@@ -138,7 +138,7 @@ let handleSubmit = async (e) => {
             </div>
             </div>
             </div>
-            </div>
+            </div> */}
             </div>
             </div>
         </section>

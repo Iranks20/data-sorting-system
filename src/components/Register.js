@@ -21,7 +21,7 @@ function Register() {
         e.preventDefault();
         SetLoading(true)
         try{
-            await fetch("http://18.234.145.70:5000/api/v1/incidences", {
+            await fetch("http://localhost:5000/api/v1/incidences", {
                 method: "POST",
                 body: JSON.stringify({
                    incident: incident,
@@ -120,7 +120,7 @@ function Register() {
             </div>
             </div>
 
-            <div>
+            {/* <div>
             <div className="container-fluid">
             <div className="row">
             <div className="col-lg-12">
@@ -130,7 +130,7 @@ function Register() {
             </div>
             </div>
             </div>
-            </div>
+            </div> */}
             </div>
         </section>
     </div>

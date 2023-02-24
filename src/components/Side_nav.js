@@ -42,7 +42,7 @@ function Side_nav() {
 					<ListItemIcon sx={{ color: "white" }}>
 					</ListItemIcon>
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }} href="/dashboard">
+				<ListItemButton sx={{ color: "white" }} href="/reporting/#/dashboard">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<CollectionsBookmark />}
 					</ListItemIcon>
@@ -59,19 +59,19 @@ function Side_nav() {
 					</ListItemIcon>
 					<ListItemText primary={"INCIDENCES"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }} href="/daily_incidence">
+				<ListItemButton sx={{ color: "white" }} href="/reporting/#/daily_incidence">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<CollectionsBookmark />}
 					</ListItemIcon>
 					<ListItemText primary={"Daily Incidences"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }} href="/weekly_incidence">
+				<ListItemButton sx={{ color: "white" }} href="/reporting/#/weekly_incidence">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<UploadFile />}
 					</ListItemIcon>
 					<ListItemText primary={"Weekly Incidences"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }} href="/monthly_incidence">
+				<ListItemButton sx={{ color: "white" }} href="/reporting/#/monthly_incidence">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<Edit />}
 					</ListItemIcon>
@@ -85,19 +85,19 @@ function Side_nav() {
 					</ListItemIcon>
 					<ListItemText primary={"REPORTERS"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }} href="/daily_reporters">
+				<ListItemButton sx={{ color: "white" }} href="/reporting/#/daily_reporters">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<Work />}
 					</ListItemIcon>
 					<ListItemText primary={"Daily Reporters"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }} href="/weekly_reporters">
+				<ListItemButton sx={{ color: "white" }} href="/reporting/#/weekly_reporters">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<PermMedia />}
 					</ListItemIcon>
 					<ListItemText primary={"Weekly Reporters"} />
 				</ListItemButton>
-				<ListItemButton sx={{ color: "white" }} href="/monthly_reporters">
+				<ListItemButton sx={{ color: "white" }} href="/reporting/#/monthly_reporters">
 					<ListItemIcon sx={{ color: "white" }}>
 						{<Feedback />}</ListItemIcon>
 					<ListItemText primary={"Monthly Reporters"} />
@@ -143,7 +143,7 @@ function Side_nav() {
 							<Typography variant="h6" width="700px">
 								Welcome To Admin Portal
 							</Typography>
-							<ListItemButton sx={{ color: "white", backgroundColor: "red" }} href="/home">
+							<ListItemButton sx={{ color: "white", backgroundColor: "red" }} href="/reporting/#/home">
 								<ListItemIcon sx={{ color: "white" }}>
 								</ListItemIcon>
 								<ListItemText primary={"ADD NEW INCIDENCE/REPORTERS"} />
