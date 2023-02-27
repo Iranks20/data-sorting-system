@@ -107,6 +107,7 @@ class Daily_incidence extends React.Component {
            </div>
    
            <Footer />
+        
            </section>
    
        </div>

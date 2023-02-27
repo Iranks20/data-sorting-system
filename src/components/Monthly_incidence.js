@@ -1,8 +1,26 @@
 import React from 'react'
 import Footer from './Footer'
 import SideNav from './Side_nav';
+import Icon from "react-crud-icons";
+// import "react-crud-icons/dist/react-crud-icons.css";
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
+import 'react-toastify/dist/ReactToastify.css';
+import Modalzz from './Modalzz';
 
 class Monthly_incidence extends React.Component {
+  state ={
+      openModal : false
+  }
+  onClickButton = e =>{
+      e.preventDefault()
+      this.setState({openModal : true})
+  }
+
+  onCloseModal = ()=>{
+      this.setState({openModal : false})
+  }
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +30,7 @@ class Monthly_incidence extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://18.234.145.70:5000/api/v1/incidences/monthly")
+    fetch("http://localhost:5000/api/v1/incidences/monthly")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)
@@ -22,6 +40,18 @@ class Monthly_incidence extends React.Component {
       });
     })
   }
+  // handleDelete() {
+  //   fetch("http://localhost:5000/api/v1/incidences/13")
+  //   .then( (res) => res.json())
+  //   .then( (json => {
+  //     console.log(json)
+  //     this.setState({
+  //       incidences:json,
+  //       DataisLoaded:true
+  //     });
+  //   }))
+  // }
+
   render() {
     const { DataisLoaded, incidences } = this.state;
     if (!DataisLoaded) return <div>
@@ -55,10 +85,62 @@ class Monthly_incidence extends React.Component {
            </div>
            </div>
            <div class="add_button ms-2">
-           <a class="btn_1" href="#">DELETE</a>
+           <a class="btn_1" href="#" onClick={this.onClickButton}>DELETE</a>
            </div>
            </div>
            </div>
+
+           {/* modal begin */}
+           <div>
+           <Modal open={this.state.openModal} onClose={this.onCloseModal}>
+            <Modalzz />
+           {/* <section>
+
+            <div className="modal-content cs_modal">
+                <div className="modal-header">
+                   <h5 className="modal-title">Fill the form with the incident details</h5>
+                </div>
+            <div className="modal-body">
+                <form onSubmit={this.UpdateIncidence}>
+                    <div className="mb-3">
+                    <input type="text" className="form-control" placeholder="incident-id" value={this.state.id} onChange={this.UpdateIncidencehandleChange} />
+                    </div>
+                    <div className="mb-3">
+                    <input type="text" className="form-control" placeholder="Enter your incidence" value={this.state.incidence} onChange={this.UpdateIncidencehandleChange} />
+                    </div>
+                    <div className="mb-3">
+                        <input type="text" className="form-control" placeholder="Enter your location" value={this.state.location} onChange={this.UpdateIncidencehandleChange} />
+                    </div>
+                    <div className="mb-3">
+                        <input type="text" className="form-control" placeholder="cordinates" value={this.state.cordinates} />
+                    </div>
+                    <div className="mb-3">
+                    <input type="text" className="form-control" placeholder="to whom" value={this.state.to_whom} onChange={this.UpdateIncidencehandleChange} />
+                    </div>
+                    <div className="mb-3">
+                        <input type="text" className="form-control" placeholder="by who" value={this.state.by_who} onChange={this.UpdateIncidencehandleChange} /> 
+                    </div>
+                    <div className="mb-3">
+                        <input type="text" className="form-control" placeholder="details" value={this.state.details} onChange={this.UpdateIncidencehandleChange} /> 
+                    </div>
+                    
+                    <div className="cs_check_box">
+                    <input type="checkbox" id="check_box" className="common_checkbox" />
+
+                    </div>
+                    <div>	 
+                    {
+                        this.state.isLoading ? <Button><Spinner animation="border" variant="light" /></Button> : <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input>
+                    }
+                    </div>
+                    
+                </form>
+            </div>
+            </div>
+        </section>                */}
+            </Modal>
+            </div>
+            {/* modal end */}
            <div class="QA_table mb_30">
    
            <table class="table lms_table_active">
@@ -73,6 +155,7 @@ class Monthly_incidence extends React.Component {
            <th scope="col">By Who</th>
            <th scope="col">Details</th>
            <th scope="col">Date $ Time</th>
+           <th scope="col">Actions</th>
            </tr>
            </thead>
            <tbody> {
@@ -87,8 +170,8 @@ class Monthly_incidence extends React.Component {
               <td>{incid.by_who}</td>
               <td>{incid.details}</td>
               <td>{incid.datetime}</td>
+              <td href=""><Icon name="edit" theme="light" size="tiny" onClick={this.onClickButton} /> <Icon name="delete" theme="light" size="tiny" /> </td>
               </tr>
-
             )) 
             
             }

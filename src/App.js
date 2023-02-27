@@ -16,7 +16,7 @@ import DailyReporters from './components/Daily_reporters';
 import WeeklyReporters from './components/Weekly_reporters';
 import MonthlyReporters from './components/Monthly_reporters';
 import SideNav from './components/Side_nav';
-import Modalz from './components/Modalz';
+import Modalzz from './components/Modalzz';
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
         <Route path='/weekly_reporters' element= {<WeeklyReporters />} />
         <Route path='/Monthly_reporters' element= {<MonthlyReporters />} />
         <Route path='/side_nav' element= {<SideNav />} />
-        <Route path='/modalz' element= {<Modalz />} />
+        <Route path='/modalzz' element= {<Modalzz />} />
        
       </Routes>
     </div>
