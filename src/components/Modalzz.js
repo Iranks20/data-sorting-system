@@ -20,7 +20,7 @@ function Modalzz() {
         SetLoading(true)
         try{
             console.log('fresh inno')
-            await fetch(`http://localhost:5000/api/v1/incidences/${id}`, {
+            await fetch(`http://54.245.35.168:5000/api/v1/incidences/${id}`, {
                 method: "PUT",
                 body: JSON.stringify({
                     id: id,

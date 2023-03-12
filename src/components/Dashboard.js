@@ -17,7 +17,7 @@ class Dashboard extends Component {
         };
       }
       componentDidMount() {
-        fetch("http://localhost:5000/api/v1/incidences/dailycounts")
+        fetch("http://54.245.35.168:5000/api/v1/incidences/dailycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -27,7 +27,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://localhost:5000/api/v1/incidences/weeklycounts")
+        fetch("http://54.245.35.168:5000/api/v1/incidences/weeklycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -37,7 +37,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://localhost:5000/api/v1/incidences/monthlycounts")
+        fetch("http://54.245.35.168:5000/api/v1/incidences/monthlycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -47,7 +47,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://localhost:5000/api/v1/incidences/countall")
+        fetch("http://54.245.35.168:5000/api/v1/incidences/countall")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -57,7 +57,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://localhost:5000/api/v1/reporters/dailycounts")
+        fetch("http://54.245.35.168:5000/api/v1/reporters/dailycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -67,7 +67,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://localhost:5000/api/v1/reporters/weeklycounts")
+        fetch("http://54.245.35.168:5000/api/v1/reporters/weeklycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -77,7 +77,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://localhost:5000/api/v1/reporters/monthlycounts")
+        fetch("http://54.245.35.168:5000/api/v1/reporters/monthlycounts")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)
@@ -87,7 +87,7 @@ class Dashboard extends Component {
           });
         })
 
-        fetch("http://localhost:5000/api/v1/reporters/allreporters")
+        fetch("http://54.245.35.168:5000/api/v1/reporters/allreporters")
         .then( (res) => res.json())
         .then( (json) => {
           console.log(json)

@@ -13,7 +13,7 @@ class Daily_incidence extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/api/v1/incidences/daily")
+    fetch("http://54.245.35.168:5000/api/v1/incidences/daily")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)

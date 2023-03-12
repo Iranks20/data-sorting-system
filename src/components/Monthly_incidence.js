@@ -30,7 +30,7 @@ class Monthly_incidence extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/api/v1/incidences/monthly")
+    fetch("http://54.245.35.168:5000/api/v1/incidences/monthly")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)
@@ -41,7 +41,7 @@ class Monthly_incidence extends React.Component {
     })
   }
   // handleDelete() {
-  //   fetch("http://localhost:5000/api/v1/incidences/13")
+  //   fetch("http://54.245.35.168:5000/api/v1/incidences/13")
   //   .then( (res) => res.json())
   //   .then( (json => {
   //     console.log(json)
@@ -85,7 +85,7 @@ class Monthly_incidence extends React.Component {
            </div>
            </div>
            <div class="add_button ms-2">
-           <a class="btn_1" href="#" onClick={this.onClickButton}>DELETE</a>
+           <a class="btn_1" href="#">EXPORT CSV</a>
            </div>
            </div>
            </div>

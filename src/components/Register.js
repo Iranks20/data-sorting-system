@@ -21,7 +21,7 @@ function Register() {
         e.preventDefault();
         SetLoading(true)
         try{
-            await fetch("http://localhost:5000/api/v1/incidences", {
+            await fetch("http://54.245.35.168:5000/api/v1/incidences", {
                 method: "POST",
                 body: JSON.stringify({
                    incident: incident,
@@ -70,47 +70,47 @@ function Register() {
             <div className="col-lg-6">
 
             <div className="modal-content cs_modal">
-            <div className="modal-header">
-            <h5 className="modal-title">Fill the form with the incident details</h5>
-            </div>
+                <div className="modal-header">
+                   <h5 className="modal-title">Fill the form with the incident details</h5>
+                </div>
             <div className="modal-body">
-            <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-                <input type="text" className="form-control" placeholder="incident" value={incident} onChange={(e) => setIncident (e.target.value)} />
-                </div>
-                <div className="mb-3">
-                <input type="text" className="form-control" placeholder="Enter your location" value={location} onChange={(e) => setLocation (e.target.value)} />
-                </div>
-                <div className="mb-3">
-                    <input type="text" className="form-control" placeholder="Enter your cordinates" value={cordinates} onChange={(e) => setCordinates (e.target.value)} />
-                </div>
-                {/* <div className="mb-3">
-                    <input type="text" className="form-control" placeholder="Enter your time" value={time} onChange={(e) => setTime (e.target.value)} />
-                </div>
-                <div className="mb-3">
-                    <input type="text" className="form-control" placeholder="Enter date" value={date} onChange={(e) => setDate (e.target.value)} />
-                </div> */}
-                <div className="mb-3">
-                    <input type="text" className="form-control" placeholder="by who" value={by_who} onChange={(e) => setBy_who (e.target.value)}  />
-                </div>
-                <div className="mb-3">
-                <input type="text" className="form-control" placeholder="to whom" value={to_whom} onChange={(e) => setTo_whom (e.target.value)} />
-                </div>
-                <div className="mb-3">
-                    <input type="text" className="form-control" placeholder="Enter details of the incidenbce" value={details} onChange={(e) => setDetails (e.target.value)} /> 
-                </div>
-                <div className="cs_check_box">
-                <input type="checkbox" id="check_box" className="common_checkbox" />
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                    <input type="text" className="form-control" placeholder="incident" value={incident} onChange={(e) => setIncident (e.target.value)} />
+                    </div>
+                    <div className="mb-3">
+                    <input type="text" className="form-control" placeholder="Enter your location" value={location} onChange={(e) => setLocation (e.target.value)} />
+                    </div>
+                    <div className="mb-3">
+                        <input type="text" className="form-control" placeholder="Enter your cordinates" value={cordinates} onChange={(e) => setCordinates (e.target.value)} />
+                    </div>
+                    {/* <div className="mb-3">
+                        <input type="text" className="form-control" placeholder="Enter your time" value={time} onChange={(e) => setTime (e.target.value)} />
+                    </div>
+                    <div className="mb-3">
+                        <input type="text" className="form-control" placeholder="Enter date" value={date} onChange={(e) => setDate (e.target.value)} />
+                    </div> */}
+                    <div className="mb-3">
+                        <input type="text" className="form-control" placeholder="by who" value={by_who} onChange={(e) => setBy_who (e.target.value)}  />
+                    </div>
+                    <div className="mb-3">
+                    <input type="text" className="form-control" placeholder="to whom" value={to_whom} onChange={(e) => setTo_whom (e.target.value)} />
+                    </div>
+                    <div className="mb-3">
+                        <input type="text" className="form-control" placeholder="Enter details of the incidenbce" value={details} onChange={(e) => setDetails (e.target.value)} /> 
+                    </div>
+                    <div className="cs_check_box">
+                    <input type="checkbox" id="check_box" className="common_checkbox" />
 
-                </div>
-                <div>	 
-                {
-                    isLoading ? <Button><Spinner animation="border" variant="light" /></Button> : <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input>
-                }
-                </div>
-                {/* <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input> */}
-                {/* <a href="#" className="btn_1 full_width text-center"> Report incident</a> */}
-            </form>
+                    </div>
+                    <div>	 
+                    {
+                        isLoading ? <Button><Spinner animation="border" variant="light" /></Button> : <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input>
+                    }
+                    </div>
+                    {/* <input className="btn_1 full_width text-center" type="submit" value="SUBMIT"></input> */}
+                    {/* <a href="#" className="btn_1 full_width text-center"> Report incident</a> */}
+                </form>
             </div>
             </div>
             </div>

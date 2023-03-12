@@ -26,7 +26,7 @@ let handleSubmit = async (e) => {
     SetLoading(true)
     e.preventDefault();
     try {
-    await fetch("http://localhost:5000/api/v1/reporters", {
+    await fetch("http://54.245.35.168:5000/api/v1/reporters", {
         method: "POST",
         headers: {
         "Content-Type": "application/json"

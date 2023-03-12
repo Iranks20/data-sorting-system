@@ -12,7 +12,7 @@ class Monthly_reporters extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://18.234.145.70:5000/api/v1/reporters/monthly")
+    fetch("http://54.245.35.168:5000/api/v1/reporters/monthly")
     .then( (res) => res.json())
     .then( (json) => {
       console.log(json)

@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
     SetLoading(true)
     try{
-        await fetch("http://18.234.145.70:8080/api/auth/signin", {
+        await fetch("http://54.245.35.168:8080/api/auth/signin", {
             method: "POST",
             body: JSON.stringify({
                username: username,
